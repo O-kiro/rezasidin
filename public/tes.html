@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reza - Fullstack Systems Engineer Portfolio">
+    <meta name="author" content="Reza">
+    <title>Reza | Fullstack Systems Engineer</title>
+
+    <!-- CSS Assets -->
+    <link rel="stylesheet" href="../assets/css/plugins.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/colors/sky.css">
+    <link rel="preload" href="../assets/css/fonts/space.css" as="style" onload="this.rel='stylesheet'">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        :root { --primary-color: #0066ff; }
+        .section-title { letter-spacing: -1.5px; font-weight: 800; }
+        .navbar-glass {
+            background: rgba(255, 255, 255, 0.8) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .card-modern {
+            border: none !important;
+            border-radius: 20px !important;
+            transition: all 0.3s ease;
+        }
+        .card-modern:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.05) !important; }
+
+        /* Tambahan Style untuk Tech Stack */
+        .tech-card {
+            transition: all .3s ease;
+            border-radius: 16px;
+        }
+        .tech-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+        .tech-badge-sm {
+            font-size: 11px;
+            background: rgba(0,102,255,0.08);
+            color: var(--primary-color);
+            padding: 2px 10px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-right: 5px;
+            text-transform: uppercase;
+        }
+        .process-wrapper.line:before { top: 1.5rem; }
+    </style>
+</head>
+
+<body>
+<div class="content-wrapper">
+    <!-- Navbar -->
+    <header class="wrapper">
+        <nav class="navbar navbar-expand-lg center-nav transparent navbar-light navbar-glass">
+            <div class="container flex-lg-row flex-nowrap align-items-center">
+                <div class="navbar-brand w-100">
+                    <a href="index.html"><h3 class="mb-0 fw-900 text-dark">ASYNCCC<span class="text-primary">.</span>ID</h3></a>
+                </div>
+                <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+                    <div class="offcanvas-header d-lg-none">
+                        <h3 class="text-white fs-30 mb-0">Menu</h3>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#stack">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Work</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#thinking">Thinking</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar-other w-100 d-flex ms-auto">
+                    <ul class="navbar-nav flex-row align-items-center ms-auto">
+                        <li class="nav-item d-none d-md-block">
+                            <a href="#contact" class="btn btn-sm btn-primary rounded-pill px-4">Consultation</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <button class="hamburger offcanvas-nav-btn"><span></span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="wrapper bg-light">
+        <div class="container pt-12 pt-md-16 pb-14 pb-md-16">
+            <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center text-center text-lg-start">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="badge bg-sky rounded-pill mb-3">Fullstack Systems Engineer</span>
+                    <h1 class="display-1 section-title mb-5">Building <span class="text-primary underline-3 style-2 sky">scalable</span> digital architecture.</h1>
+                    <p class="lead fs-22 mb-7 text-muted">Specializing in backend logic, high-throughput systems, and clean, maintainable codebases that drive business growth.</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <a href="#projects" class="btn btn-lg btn-navy rounded-pill me-3">View Projects</a>
+                        <a href="#contact" class="btn btn-lg btn-outline-primary rounded-pill">Contact Me</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <!-- HERO IMAGE WITH OVERLAY-2 -->
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-xl img-mask mask-3">
+                        <a href="#">
+                            <img src="f2.webp" alt="Reza Profile" />
+                        </a>
+                        <figcaption>
+                            <h5 class="from-top mb-1">Reza</h5>
+                            <p class="from-bottom">Fullstack Software Engineer</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="wrapper bg-white">
+        <div class="container py-14 py-md-16">
+            <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+                <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                    <span class="badge bg-sky rounded-pill mb-3">Who I Am</span>
+                    <h2 class="display-4 section-title mb-4">A student developer with a passion for Engineering.</h2>
+                    <p class="mb-5 text-muted">I am a student and developer based in Indonesia with a deep interest in software engineering and complex backend systems. I bridge the gap between abstract business requirements and concrete, high-performance technical solutions.</p>
+                    <div class="row gy-3 mb-6">
+                        <div class="col-md-6">
+                            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                                <li><span><i class="uil uil-check"></i></span><span>Continuous Learner</span></li>
+                                <li><span><i class="uil uil-check"></i></span><span>Problem Solver</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                                <li><span><i class="uil uil-check"></i></span><span>System Focused</span></li>
+                                <li><span><i class="uil uil-check"></i></span><span>Clean Code Advocate</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img class="img-fluid bento-image shadow-lg" src="../assets/img/photos/about7.jpg" alt="">
+                        </div>
+                        <div class="col-6 mt-5">
+                            <div class="card bg-primary text-white p-4 card-modern shadow-lg mb-3 text-center">
+                                <h3 class="text-white mb-0 counter">25+</h3>
+                                <p class="mb-0 fs-14">Projects Built</p>
+                            </div>
+                            <img class="img-fluid bento-image shadow-lg" src="../assets/img/photos/about10.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL STACK (DARI PK.HTML) -->
+    <!-- Technical Stack Section -->
+    <section id="stack" class="wrapper bg-light">
+        <div class="container py-14 py-md-16">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="badge bg-sky rounded-pill mb-3">Toolbelt</span>
+                <h2 class="display-4 section-title">Technical Stack</h2>
+                <p class="lead text-muted px-md-12 px-lg-0">Technologies I use to build high-performance and scalable digital solutions.</p>
+            </div>
+
+            <!-- Grid Container: Menggunakan row-cols untuk responsivitas yang lebih rapi -->
+            <div class="row g-4 row-cols-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-7 justify-content-center" data-aos="fade-up">
+
+                <!-- React -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">React.js</h6><p class="from-bottom fs-13">Frontend</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- Next.js -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">Next.js</h6><p class="from-bottom fs-13">Fullstack</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- Go (Golang) -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" alt="Go" style="padding: 25px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">Golang</h6><p class="from-bottom fs-13">High Perf</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- Node.js -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">Node.js</h6><p class="from-bottom fs-13">Runtime</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- Laravel -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="laravel.webp" alt="Laravel" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">Laravel</h6><p class="from-bottom fs-13">Backend</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">Tailwind</h6><p class="from-bottom fs-13">UI/UX</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">TypeScript</h6><p class="from-bottom fs-13">Type Safety</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- PostgreSQL -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">PostgreSQL</h6><p class="from-bottom fs-13">RDBMS</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- MySQL -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">MySQL</h6><p class="from-bottom fs-13">Database</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- Kafka -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Kafka" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">Kafka</h6><p class="from-bottom fs-13">Messaging</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- gRPC (Placeholder icon menggunakan Google logo / gRPC style) -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="gRPC" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain; filter: hue-rotate(180deg);" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">gRPC</h6><p class="from-bottom fs-13">Microservices</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- AWS Lambda -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS Lambda" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">AWS Lambda</h6><p class="from-bottom fs-13">Serverless</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- Docker -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">Docker</h6><p class="from-bottom fs-13">Containers</p></figcaption>
+                    </figure>
+                </div>
+
+                <!-- Git -->
+                <div class="col">
+                    <figure class="overlay overlay-2 hover-scale color rounded shadow-sm mb-0">
+                        <a href="#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" style="padding: 28px; background: #fff; height: 150px; width: 100%; object-fit: contain;" />
+                        </a>
+                        <figcaption><h6 class="from-top mb-1">Git</h6><p class="from-bottom fs-13">Version Control</p></figcaption>
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT SHOWCASE (DARI PK.HTML DENGAN STYLE INDEX.HTML) -->
+    <section id="projects" class="wrapper bg-soft-primary">
+        <div class="container py-14 py-md-16">
+            <div class="row text-center mb-10" data-aos="fade-up">
+                <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                    <span class="badge bg-sky rounded-pill mb-3">Project Showcase</span>
+                    <h3 class="display-4 section-title">Selected Engineering Works</h3>
+                </div>
+            </div>
+
+            <div class="row gy-6">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card card-modern bg-white h-100 shadow-sm">
+                        <div class="card-body p-7">
+                            <div class="mb-3">
+                                <span class="tech-badge-sm">Laravel</span>
+                                <span class="tech-badge-sm">MySQL</span>
+                            </div>
+                            <h4 class="mb-1">School Management System</h4>
+                            <p class="text-muted mb-4">Fullstack web application for managing student data, attendance, and grading with automated reporting.</p>
+                            <a href="#" class="hover link-primary fw-bold text-uppercase fs-13">View Project <i class="uil uil-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card card-modern bg-white h-100 shadow-sm">
+                        <div class="card-body p-7">
+                            <div class="mb-3">
+                                <span class="tech-badge-sm">React</span>
+                                <span class="tech-badge-sm">Next.js</span>
+                            </div>
+                            <h4 class="mb-1">Portfolio Website</h4>
+                            <p class="text-muted mb-4">Responsive personal website showcasing projects and technical skills with high PageSpeed optimization.</p>
+                            <a href="#" class="hover link-primary fw-bold text-uppercase fs-13">View Project <i class="uil uil-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card card-modern bg-white h-100 shadow-sm">
+                        <div class="card-body p-7">
+                            <div class="mb-3">
+                                <span class="tech-badge-sm">PHP</span>
+                                <span class="tech-badge-sm">ESP32</span>
+                            </div>
+                            <h4 class="mb-1">IoT for KRON Robot</h4>
+                            <p class="text-muted mb-4">IoT robot integrated with web dashboard for real-time hardware monitoring and remote control.</p>
+                            <a href="#" class="hover link-primary fw-bold text-uppercase fs-13">View Project <i class="uil uil-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card card-modern bg-white h-100 shadow-sm">
+                        <div class="card-body p-7">
+                            <div class="mb-3">
+                                <span class="tech-badge-sm">HTML</span>
+                                <span class="tech-badge-sm">CSS</span>
+                                <span class="tech-badge-sm">JS</span>
+                            </div>
+                            <h4 class="mb-1">Islamic War Education</h4>
+                            <p class="text-muted mb-4">Static educational website explaining Islamic historical wars with structured and responsive content.</p>
+                            <a href="#" class="hover link-primary fw-bold text-uppercase fs-13">View Project <i class="uil uil-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card card-modern bg-white h-100 shadow-sm">
+                        <div class="card-body p-7">
+                            <div class="mb-3">
+                                <span class="tech-badge-sm">Laravel</span>
+                                <span class="tech-badge-sm">Bootstrap</span>
+                            </div>
+                            <h4 class="mb-1">Plastic Waste Economy</h4>
+                            <p class="text-muted mb-4">Platform promoting recycling economy and waste-to-value solutions with data visualization.</p>
+                            <a href="#" class="hover link-primary fw-bold text-uppercase fs-13">View Project <i class="uil uil-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card card-modern bg-white h-100 shadow-sm">
+                        <div class="card-body p-7">
+                            <div class="mb-3">
+                                <span class="tech-badge-sm">Node.js</span>
+                                <span class="tech-badge-sm">Webhook</span>
+                            </div>
+                            <h4 class="mb-1">WhatsApp Auto Reply Bot</h4>
+                            <p class="text-muted mb-4">Automation bot that handles incoming WhatsApp messages and syncs data to a MySQL database.</p>
+                            <a href="#" class="hover link-primary fw-bold text-uppercase fs-13">View Project <i class="uil uil-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: How I Think -->
+    <section id="thinking" class="wrapper bg-light">
+        <div class="container py-14 py-md-16">
+            <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <span class="badge bg-sky rounded-pill mb-3">Mindset</span>
+                    <h2 class="display-4 section-title mb-4">The Engineer behind the code.</h2>
+                    <p class="lead mb-6">My approach to development is centered on the premise that code is read far more often than it is written.</p>
+                    <div class="d-flex flex-row mb-5">
+                        <div><div class="icon btn btn-circle btn-soft-primary pe-none me-4"><i class="uil uil-layers"></i></div></div>
+                        <div>
+                            <h4 class="mb-1">Architectural Clarity</h4>
+                            <p class="mb-0 text-muted">Prioritizing maintainable design patterns over obscure optimizations to ensure systems grow gracefully.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div><div class="icon btn btn-circle btn-soft-primary pe-none me-4"><i class="uil uil-chart-grow-alt"></i></div></div>
+                        <div>
+                            <h4 class="mb-1">Foundational Scalability</h4>
+                            <p class="mb-0 text-muted">Identifying potential bottlenecks early through database indexing and asynchronous processing strategies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <figure class="rounded-xl shadow-xl overflow-hidden"><img src="../assets/img/photos/about7.jpg" alt="Workflow"></figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Process -->
+    <section class="wrapper bg-soft-primary">
+        <div class="container py-14 py-md-16">
+            <h2 class="display-4 section-title mb-3" data-aos="fade-right">How I Work</h2>
+            <div class="row gx-lg-8 gx-xl-12 gy-6 process-wrapper line" data-aos="fade-up">
+                <div class="col-md-6 col-lg-3">
+                    <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none mb-4"><span class="number">01</span></span>
+                    <h4 class="mb-1">Analysis</h4>
+                    <p class="small mb-0">Deep diving into goals and technical constraints before writing a single line of code.</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <span class="icon btn btn-circle btn-lg btn-primary pe-none mb-4"><span class="number">02</span></span>
+                    <h4 class="mb-1">Strategy</h4>
+                    <p class="small mb-0">Designing system structure, data flow, and choosing the optimal tech stack for longevity.</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none mb-4"><span class="number">03</span></span>
+                    <h4 class="mb-1">Execution</h4>
+                    <p class="small mb-0">Writing clean, modular, and strictly-documented code using industry-best practices.</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none mb-4"><span class="number">04</span></span>
+                    <h4 class="mb-1">Delivery</h4>
+                    <p class="small mb-0">Rigorous testing cycles to ensure stability, performance, and readiness for deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="wrapper bg-light">
+        <div class="container py-14 py-md-16">
+            <div class="row text-center" data-aos="fade-up">
+                <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                    <h2 class="display-4 section-title mb-4">Let's discuss your infrastructure.</h2>
+                    <p class="lead fs-lg mb-8">Building software is an investment in your business’s infrastructure. I provide the technical expertise to ensure it's built on a foundation of clean logic.</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="mailto:reza@email.com" class="btn btn-lg btn-primary rounded-pill">Schedule a Technical Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-inverse">
+    <div class="container py-13 py-md-15">
+        <div class="row gy-6 gy-lg-0">
+            <div class="col-md-4 col-lg-3">
+                <div class="widget">
+                    <h3 class="text-white mb-4">ASYNCCC<span class="text-primary">.</span>ID</h3>
+                    <p class="mb-4">© 2024. Systems Architecture Portfolio.</p>
+                    <nav class="nav social social-white">
+                        <a href="#"><i class="uil uil-github"></i></a>
+                        <a href="#"><i class="uil uil-linkedin"></i></a>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="widget">
+                    <h4 class="widget-title text-white mb-3">Direct Contact</h4>
+                    <address>Jakarta, Indonesia (GMT+7)</address>
+                    <a href="mailto:reza@email.com" class="link-inverse">reza@email.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../assets/js/plugins.js"></script>
+<script src="../assets/js/theme.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true });
+</script>
+</body>
+</html>
