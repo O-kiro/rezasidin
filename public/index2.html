@@ -9,10 +9,10 @@
     <title>Reza | Fullstack Systems Engineer</title>
 
     <!-- CSS Assets -->
-    <link rel="stylesheet" href="../assets/css/plugins.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/colors/sky.css">
-    <link rel="preload" href="../assets/css/fonts/dm.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/colors/sky.css">
+    <link rel="preload" href="assets/css/fonts/dm.css" as="style" onload="this.rel='stylesheet'">
 
     <!-- AOS Animation CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -42,6 +42,49 @@
             text-transform: uppercase;
         }
         .process-wrapper.line:before { top: 1.5rem; }
+
+        /* WIP badge */
+        .badge-wip {
+            font-size: 11px;
+            background: rgba(255, 165, 0, 0.12);
+            color: #d97706;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Testimonial coming soon state */
+        .testi-coming {
+            opacity: 0.45;
+            border: 2px dashed rgba(0,0,0,0.1) !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 140px;
+        }
+        .testi-coming p {
+            font-size: 13px;
+            color: #aaa;
+            margin: 0;
+            font-style: italic;
+        }
+
+        /* Skills grid */
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-pill {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 50px;
+            background: rgba(0,102,255,0.07);
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
     </style>
 </head>
 
@@ -62,8 +105,8 @@
                     <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#projects">Work</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#thinking">Thinking</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
                             <li class="nav-item"><a class="nav-link" href="#testimonials">Feedback</a></li>
                         </ul>
                     </div>
@@ -90,8 +133,8 @@
                     <span class="badge bg-sky rounded-pill mb-3">Fullstack Systems Engineer</span>
                     <h1 class="display-1 section-title mb-5">Building <span class="text-primary underline-3 style-2 sky">scalable</span> digital architecture.</h1>
                     <p class="lead fs-22 mb-7 text-muted">Specializing in backend logic, high-throughput systems, and clean, maintainable codebases that drive business growth.</p>
-                    <div class="d-flex justify-content-center justify-content-lg-start">
-                        <a href="#projects" class="btn btn-lg btn-navy rounded-pill me-3">View Projects</a>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+                        <a href="#about" class="btn btn-lg btn-navy rounded-pill">About Me</a>
                         <a href="#contact" class="btn btn-lg btn-outline-primary rounded-pill">Contact Me</a>
                     </div>
                 </div>
@@ -104,14 +147,16 @@
         </div>
     </section>
 
-    <!-- NEW SECTION: About Me (Identity & Mission) -->
+    <!-- About Me -->
     <section id="about" class="wrapper bg-white">
         <div class="container py-14 py-md-16">
-            <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-                <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+            <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-start">
+                <div class="col-lg-6" data-aos="fade-right">
                     <span class="badge bg-sky rounded-pill mb-3">Who I Am</span>
-                    <h2 class="display-4 section-title mb-4">A student developer with a passion for Engineering.</h2>
-                    <p class="mb-5 text-muted">I am a student and developer based in Indonesia with a deep interest in software engineering and complex backend systems. I bridge the gap between abstract business requirements and concrete, high-performance technical solutions.</p>
+                    <h2 class="display-4 section-title mb-4">A student developer with a passion for engineering.</h2>
+                    <p class="mb-4 text-muted">I'm a student developer based in <strong>Malang, Indonesia</strong> with a deep interest in software engineering and complex backend systems. I bridge the gap between abstract business requirements and concrete, high-performance technical solutions.</p>
+                    <p class="mb-6 text-muted">My mission is to develop software that is not just functional, but reliable, scalable, and easy for other developers to maintain. I value clarity, responsibility, and technical excellence.</p>
+
                     <div class="row gy-3 mb-6">
                         <div class="col-md-6">
                             <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
@@ -126,108 +171,56 @@
                             </ul>
                         </div>
                     </div>
-                    <p class="mb-0">My mission is to develop software that is not just functional, but reliable, scalable, and easy for other developers to maintain. I value clarity, responsibility, and technical excellence.</p>
                 </div>
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <img class="img-fluid bento-image shadow-lg" src="../assets/img/photos/about7.jpg" alt="">
-                        </div>
-                        <div class="col-6 mt-5">
-                            <div class="card bg-primary text-white p-4 card-modern shadow-lg mb-3 text-center">
-                                <h3 class="text-white mb-0 counter">25+</h3>
-                                <p class="mb-0 fs-14">Projects Built</p>
-                            </div>
-                            <img class="img-fluid bento-image shadow-lg" src="../assets/img/photos/about10.jpg" alt="">
-                        </div>
+
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h5 class="mb-3 text-muted fw-bold text-uppercase" style="font-size:11px; letter-spacing:1px;">Tech Stack</h5>
+
+                    <p class="mb-2" style="font-size:12px; font-weight:700; text-transform:uppercase; color:#aaa; letter-spacing:.5px;">Backend</p>
+                    <div class="skills-grid mb-4">
+                        <span class="skill-pill">Node.js</span>
+                        <span class="skill-pill">Go (Golang)</span>
+                        <span class="skill-pill">PostgreSQL</span>
+                        <span class="skill-pill">Redis</span>
+                        <span class="skill-pill">Kafka</span>
+                        <span class="skill-pill">gRPC</span>
+                    </div>
+
+                    <p class="mb-2" style="font-size:12px; font-weight:700; text-transform:uppercase; color:#aaa; letter-spacing:.5px;">Frontend</p>
+                    <div class="skills-grid mb-4">
+                        <span class="skill-pill">Next.js</span>
+                        <span class="skill-pill">React</span>
+                        <span class="skill-pill">GraphQL</span>
+                        <span class="skill-pill">TypeScript</span>
+                    </div>
+
+                    <p class="mb-2" style="font-size:12px; font-weight:700; text-transform:uppercase; color:#aaa; letter-spacing:.5px;">Infrastructure</p>
+                    <div class="skills-grid mb-6">
+                        <span class="skill-pill">AWS Lambda</span>
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">Microservices</span>
+                    </div>
+
+                    <div class="d-flex gap-3 mt-2">
+                        <a href="https://github.com/YOUR_GITHUB" target="_blank" class="btn btn-outline-primary rounded-pill btn-sm px-4">
+                            <i class="uil uil-github me-1"></i> GitHub
+                        </a>
+                        <a href="mailto:YOUR_EMAIL" class="btn btn-outline-primary rounded-pill btn-sm px-4">
+                            <i class="uil uil-envelope me-1"></i> Email Me
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 1: Selected Projects -->
-    <section id="projects" class="wrapper bg-soft-primary">
-        <div class="container py-14 py-md-16">
-            <div class="row text-center mb-10" data-aos="fade-up">
-                <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                    <span class="badge bg-sky rounded-pill mb-3">Selected Projects</span>
-                    <h3 class="display-4 section-title">Logic-driven solutions</h3>
-                </div>
-            </div>
-
-            <div class="row gy-6">
-                <!-- Project 1 -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card card-modern bg-white h-100 shadow-sm">
-                        <div class="card-body p-7">
-                            <div class="mb-3">
-                                <span class="tech-badge-sm">Node.js</span>
-                                <span class="tech-badge-sm">Redis</span>
-                                <span class="tech-badge-sm">PostgreSQL</span>
-                            </div>
-                            <h4 class="mb-1">Nexus Inventory Management</h4>
-                            <p class="small text-primary mb-3">Manual tracking → Real-time automated sync engine</p>
-                            <p class="text-muted mb-4">Developed a synchronization engine for multi-warehouse logistics focusing on optimistic UI updates and strictly typed backend logic.</p>
-                            <ul class="icon-list bullet-bg bullet-soft-primary mb-5 fs-15">
-                                <li><span><i class="uil uil-check"></i></span><span>Handled 10k+ SKU updates/min without locks.</span></li>
-                                <li><span><i class="uil uil-check"></i></span><span>Reduced data entry errors by 40%.</span></li>
-                            </ul>
-                            <a href="#" class="hover link-primary fw-bold text-uppercase fs-13">View Case Study <i class="uil uil-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card card-modern bg-white h-100 shadow-sm">
-                        <div class="card-body p-7">
-                            <div class="mb-3">
-                                <span class="tech-badge-sm">Go (Golang)</span>
-                                <span class="tech-badge-sm">gRPC</span>
-                                <span class="tech-badge-sm">Kafka</span>
-                            </div>
-                            <h4 class="mb-1">CoreLink Payment Gateway</h4>
-                            <p class="small text-primary mb-3">Transaction middleware with idempotent processing</p>
-                            <p class="text-muted mb-4">Designed a microservices API aggregating regional payment providers into a single interface with comprehensive audit logging.</p>
-                            <ul class="icon-list bullet-bg bullet-soft-primary mb-5 fs-15">
-                                <li><span><i class="uil uil-check"></i></span><span>Achieved 99.99% uptime during peak traffic.</span></li>
-                                <li><span><i class="uil uil-check"></i></span><span>Reduced response latency by 150ms.</span></li>
-                            </ul>
-                            <a href="#" class="hover link-primary fw-bold text-uppercase fs-13">See on GitHub <i class="uil uil-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card card-modern bg-white h-100 shadow-sm">
-                        <div class="card-body p-7">
-                            <div class="mb-3">
-                                <span class="tech-badge-sm">Next.js</span>
-                                <span class="tech-badge-sm">GraphQL</span>
-                                <span class="tech-badge-sm">AWS Lambda</span>
-                            </div>
-                            <h4 class="mb-1">Vector Architecture CRM</h4>
-                            <p class="small text-primary mb-3">Optimized showcase → Lead qualification pipeline</p>
-                            <p class="text-muted mb-4">High-performance frontend integrated with a serverless lead routing system and bespoke project management CMS.</p>
-                            <ul class="icon-list bullet-bg bullet-soft-primary mb-5 fs-15">
-                                <li><span><i class="uil uil-check"></i></span><span>Improved PageSpeed score from 45 to 98.</span></li>
-                                <li><span><i class="uil uil-check"></i></span><span>Saved operations 10 hours of manual work/week.</span></li>
-                            </ul>
-                            <a href="#" class="hover link-primary fw-bold text-uppercase fs-13">Visit Website <i class="uil uil-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 2: How I Think -->
+    <!-- How I Think -->
     <section id="thinking" class="wrapper bg-light">
         <div class="container py-14 py-md-16">
             <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
                 <div class="col-lg-5" data-aos="fade-right">
                     <span class="badge bg-sky rounded-pill mb-3">Mindset</span>
-                    <h2 class="display-4 section-title mb-4">The Engineer behind the code.</h2>
+                    <h2 class="display-4 section-title mb-4">The engineer behind the code.</h2>
                     <p class="lead mb-6">My approach to development is centered on the premise that code is read far more often than it is written.</p>
                     <div class="d-flex flex-row mb-5">
                         <div><div class="icon btn btn-circle btn-soft-primary pe-none me-4"><i class="uil uil-layers"></i></div></div>
@@ -252,14 +245,14 @@
                     </div>
                 </div>
                 <div class="col-lg-7" data-aos="fade-left">
-                    <figure class="rounded-xl shadow-xl overflow-hidden"><img src="../assets/img/photos/about7.jpg" alt="Workflow"></figure>
+                    <figure class="rounded-xl shadow-xl overflow-hidden"><img src="assets/img/photos/about7.jpg" alt="Workflow"></figure>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 3: Process -->
-    <section class="wrapper bg-soft-primary">
+    <!-- Process -->
+    <section id="process" class="wrapper bg-soft-primary">
         <div class="container py-14 py-md-16">
             <h2 class="display-4 section-title mb-3" data-aos="fade-right">How I Work</h2>
             <p class="lead fs-lg mb-8" data-aos="fade-right" data-aos-delay="100">A structured methodology for reliable results.</p>
@@ -288,47 +281,58 @@
         </div>
     </section>
 
-    <!-- Section 4: Testimonials -->
+    <!-- Testimonials -->
     <section id="testimonials" class="wrapper bg-light">
         <div class="container py-14 py-md-16">
             <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
                 <div class="col-lg-7" data-aos="fade-right">
                     <div class="row gx-md-5 gy-5 text-start">
                         <div class="col-md-6 col-xl-5 align-self-end">
-                            <div class="card bg-pale-yellow shadow-sm"><div class="card-body p-6"><blockquote class="icon mb-0"><p>“Demonstrates strong logical thinking and attention to detail in development.”</p><div class="blockquote-details"><h5 class="mb-1">Coriss Ambady</h5><p class="mb-0">Tech Lead</p></div></blockquote></div></div>
+                            <div class="card card-modern testi-coming">
+                                <p>Awaiting feedback from collaborators...</p>
+                            </div>
                         </div>
                         <div class="col-md-6 align-self-end">
-                            <div class="card bg-pale-red shadow-sm"><div class="card-body p-6"><blockquote class="icon mb-0"><p>“Delivers structured solutions with clear communication. Highly recommended.”</p><div class="blockquote-details"><h5 class="mb-1">Cory Zamora</h5><p class="mb-0">Project Manager</p></div></blockquote></div></div>
+                            <div class="card card-modern testi-coming">
+                                <p>Awaiting feedback from collaborators...</p>
+                            </div>
                         </div>
                         <div class="col-md-6 col-xl-5 offset-xl-1">
-                            <div class="card bg-pale-leaf shadow-sm"><div class="card-body p-6"><blockquote class="icon mb-0"><p>“Clean code and very easy to collaborate with on complex system logic.”</p><div class="blockquote-details"><h5 class="mb-1">Barclay Widerski</h5><p class="mb-0">Fullstack Partner</p></div></blockquote></div></div>
+                            <div class="card card-modern testi-coming">
+                                <p>Awaiting feedback from collaborators...</p>
+                            </div>
                         </div>
                         <div class="col-md-6 align-self-start">
-                            <div class="card bg-pale-blue shadow-sm"><div class="card-body p-6"><blockquote class="icon mb-0"><p>“Impressive problem-solving skills and very reliable under tight deadlines.”</p><div class="blockquote-details"><h5 class="mb-1">Jackie Sanders</h5><p class="mb-0">Founder</p></div></blockquote></div></div>
+                            <div class="card card-modern testi-coming">
+                                <p>Awaiting feedback from collaborators...</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 text-center text-lg-start" data-aos="fade-left">
                     <span class="badge bg-sky rounded-pill mb-3">Validation</span>
-                    <h2 class="display-4 mb-3">Engineered for satisfaction.</h2>
-                    <p class="lead fs-lg">See what my partners and clients are saying about our collaboration.</p>
-                    <p>Building long-term relationships through quality code and transparent communication is my priority. Every project is a step towards technical excellence.</p>
-                    <a href="#" class="btn btn-navy rounded-pill mt-3">All Feedback</a>
+                    <h2 class="display-4 mb-3">Feedback coming soon.</h2>
+                    <p class="lead fs-lg">Currently building track record through active collaborations.</p>
+                    <p class="text-muted">Once projects ship, real testimonials from real collaborators will live here. No fakes — just honest feedback.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 5: Persuasive CTA -->
+    <!-- Contact CTA -->
     <section id="contact" class="wrapper bg-soft-primary">
         <div class="container py-14 py-md-16">
             <div class="row text-center" data-aos="fade-up">
                 <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                     <h2 class="display-4 section-title mb-4">Let's discuss your infrastructure.</h2>
-                    <p class="lead fs-lg mb-8">Building software is an investment in your business’s infrastructure. I provide the technical expertise to ensure that investment is sound, scalable, and built on a foundation of clean logic.</p>
+                    <p class="lead fs-lg mb-8">Building software is an investment in your business. I provide the technical expertise to ensure that investment is sound, scalable, and built on clean logic.</p>
                     <div class="d-flex flex-wrap justify-content-center gap-3">
-                        <a href="mailto:reza@email.com" class="btn btn-lg btn-primary rounded-pill">Schedule a Technical Consultation</a>
-                        <a href="#" class="btn btn-lg btn-outline-primary rounded-pill">Request a Project Review</a>
+                        <a href="mailto:YOUR_EMAIL" class="btn btn-lg btn-primary rounded-pill">
+                            <i class="uil uil-envelope me-1"></i> Schedule a Consultation
+                        </a>
+                        <a href="https://github.com/YOUR_GITHUB" target="_blank" class="btn btn-lg btn-outline-primary rounded-pill">
+                            <i class="uil uil-github me-1"></i> View GitHub
+                        </a>
                     </div>
                 </div>
             </div>
@@ -343,18 +347,18 @@
             <div class="col-md-4 col-lg-3">
                 <div class="widget">
                     <h3 class="text-white mb-4">ASYNCCC<span class="text-primary">.</span>ID</h3>
-                    <p class="mb-4">© 2024. Systems Architecture Portfolio.</p>
+                    <p class="mb-4">© 2026. Systems Architecture Portfolio.</p>
                     <nav class="nav social social-white">
-                        <a href="#"><i class="uil uil-github"></i></a>
-                        <a href="#"><i class="uil uil-linkedin"></i></a>
+                        <a href="https://github.com/YOUR_GITHUB" target="_blank"><i class="uil uil-github"></i></a>
+                        <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank"><i class="uil uil-linkedin"></i></a>
                     </nav>
                 </div>
             </div>
             <div class="col-md-4 col-lg-3">
                 <div class="widget">
                     <h4 class="widget-title text-white mb-3">Direct Contact</h4>
-                    <address>Jakarta, Indonesia (GMT+7)</address>
-                    <a href="mailto:reza@email.com" class="link-inverse">reza@email.com</a>
+                    <address>Malang, Indonesia (GMT+7)</address>
+                    <a href="mailto:YOUR_EMAIL" class="link-inverse">YOUR_EMAIL</a>
                 </div>
             </div>
             <div class="col-lg-6 text-lg-end">
@@ -367,9 +371,8 @@
     </div>
 </footer>
 
-<script src="../assets/js/plugins.js"></script>
-<script src="../assets/js/theme.js"></script>
-<!-- AOS Animation JS -->
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/theme.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init({ duration: 800, once: true });
